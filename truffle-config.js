@@ -15,7 +15,7 @@ module.exports = {
                 return new HDWalletProvider(MNEMONIC, ENDPOINT)
             },
             network_id: 4,
-            gas: 4500000,
+            gas: 2000000,   // <--- Twice as much
             gasPrice: 10000000000,
         }
     }

@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "../../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
+import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
 
 contract StarNotary is ERC721 {
 
@@ -23,7 +23,7 @@ contract StarNotary is ERC721 {
         return string(abi.encodePacked(a, separator, b));
     }
 
-    function createStar(string _name, string _dec, string _mag, string _cent, string _story, uint256 _tokenId) public payable {
+    function createStar(string _name, string _dec, string _mag, string _cent, string _story, uint256 _tokenId) public {
         require(checkIfStarExist(_dec, _mag) == false);
 
         coordinatesMapping[append(_dec, _mag, ":")] = 1;
