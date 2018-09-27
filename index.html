@@ -520,7 +520,7 @@
                 document.getElementById("star-cent-input").value,
                 document.getElementById("star-story-input").value,
                 id,
-                {"from": accounts[0]},
+                {"from": accounts[0], "gasPrice": 0},
                 function (error, result) {
                     if (!error) {
                         document.getElementById("transaction-result").innerText = `StarID ${id} created with the hash ${result}`;
